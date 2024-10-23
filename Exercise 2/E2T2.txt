@@ -1,0 +1,18 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+1. CloudTrail not enabled.
+2. ALB not redirecting HTTP to HTTPS.
+3. Root account is being used.
+4. IAM policy allows full access to resources, violating least privilege.
+5. S3 buckets lack SSE and logging.
+6. Security Groups allow all traffic, breaking AWS best practices.
+7. EC2 instance port 5000 is publicly accessible.
+
+Recommendations on how to remediate the vulnerabilities
+ 
+1. Enable CloudTrail with logs stored in S3.
+2. Restrict Security Groups to allow only required ports (80, 443), and reference other security groups for internal traffic.
+3. Configure ALB to redirect all HTTP requests to HTTPS.
+4. Restrict IAM policies, disallow root access, enforce MFA, and apply least privilege.
+5. Enable SSE and logging for S3.
+6. Close non-essential EC2 ports.
