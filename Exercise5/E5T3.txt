@@ -1,0 +1,27 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+1. Terraform Compliance: https://terraform-compliance.com/
+2. Clair: https://github.com/quay/clair
+3. Chef Inspect: https://github.com/inspec/inspec
+
+### Example vulnerability
+1. Detects whether security groups are configured to allow unrestricted inbound access (e.g., 0.0.0.0/0) to sensitive ports, which can expose applications to unauthorized access.
+2. Access logs not enabled to resources that support it
+
+##Scan AMI’s or containers for OS vulnerabilities
+1. Ansible
+
+### Example vulnerability
+1. SSH root access with password logon
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+1. AWS Config
+2. AWS Inspector
+3. AWS GuardDuty
+
+### Example vulnerability
+1. An IAM role assigned a policy that allows admin access
+2. s3-bucket-server-side-encryption
+3. UnauthorizedAccess:EC2/SSHBruteForce
+ 
